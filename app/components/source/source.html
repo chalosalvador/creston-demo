@@ -2,7 +2,7 @@
   <h1 class="text-uppercase" data-ch5-i18n="-+source.title+-">Present a Source</h1>
   <p class="lead desc-title" data-ch5-i18n="-+source.description+-"></p>
   <hr />
-  <ch5-list class="source-list" indexId="idx" size="4" maxWidth="1000px" receiveStateSize="SourceList.NumberOfSources"
+  <ch5-list class="source-list" indexId="idx" size="3" maxWidth="1000px" receiveStateSize="SourceList.NumberOfSources"
     orientation="horizontal">
     <template>
       <div class="horizontal-list-item">
@@ -10,8 +10,23 @@
           receivestatelabel="SourceList.Sources[{{idx}}].NameOfSource"
           receivestateiconclass="SourceList.Sources[{{idx}}].IconClassOfSource" iconPosition="top"
           receiveStateSelected="SourceList.Sources[{{idx}}].SourceIsSelected"
-          sendEventOnClick="SourceList.Sources[{{idx}}].SetSourceSelected"></ch5-button>
+          sendEventOnClick="show_counter"></ch5-button>
       </div>
     </template>
   </ch5-list>
+
+  <ch5-modal-dialog id="modal-counter"
+                    receiveStateShowPulse="show_counter"
+                    receiveStateHidePulse="hide_counter"
+                    closable
+                    mask
+                    okButtonLabel="Confirm"
+                    okButtonIcon="fas fa-plus"
+                    okButtonStyle="color:#333;background:#efefef"
+                    cancelButtonLabel="Ignore"
+                    cancelButtonIcon="fas fa-minus"
+                    cancelButtonStyle="color:#333;background:#efefef">
+    <p>Contador</p>
+    <div id='counter'>7</div>
+</ch5-modal-dialog>
 </section>
