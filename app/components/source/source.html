@@ -1,8 +1,5 @@
 <section class="details-container">
-  <h1 class="text-uppercase" data-ch5-i18n="-+source.title+-">Present a Source</h1>
-  <p class="lead desc-title" data-ch5-i18n="-+source.description+-"></p>
-  <hr />
-  <ch5-list class="source-list" indexId="idx" size="4" maxWidth="1000px" receiveStateSize="SourceList.NumberOfSources"
+  <ch5-list class="source-list" indexId="idx" size="3" maxWidth="1800px" receiveStateSize="SourceList.NumberOfSources"
     orientation="horizontal">
     <template>
       <div class="horizontal-list-item">
@@ -12,6 +9,22 @@
           receiveStateSelected="SourceList.Sources[{{idx}}].SourceIsSelected"
           sendEventOnClick="SourceList.Sources[{{idx}}].SetSourceSelected"></ch5-button>
       </div>
+      
     </template>
   </ch5-list>
+  <ch5-modal-dialog id="modal-counter" 
+      receiveStateShowPulse="SourceList.Sources[0].SourceIsSelected" receivestatehidepulse="SourceList.Sources[1].SetSourceSelected" 
+      hidecancelbutton="true"
+      hideOkButton="true"
+      customclass="time-modal"></ch5-button>
+      <p >Are you sure you want enter Event mode?</p>
+      <p >Projection screens will automatically lower in: </p>
+      <div style="font-size: 100px;" id='counter'></div>
+      <p >Seconds</p>
+      <ch5-button customclass="cancel-button" label="Cancel" 
+      sendeventonclick="SourceList.Sources[1].SetSourceSelected"></ch5-button>
+      <ch5-button customclass="cancel-button" label="Open" 
+      sendeventonclick="show"></ch5-button>
+  </ch5-modal-dialog>
+  
 </section>

@@ -698,7 +698,7 @@
     {
       "state": "Room.DimmableLights[0].LightIsAtLevel",
       "type": "n",
-      "value": 20000
+      "value": 33000
     },
     {
       "state": "Room.DimmableLights[1].NameOfLight",
@@ -708,7 +708,7 @@
     {
       "state": "Room.DimmableLights[1].LightIsAtLevel",
       "type": "n",
-      "value": 30000
+      "value": 33000
     },
     {
       "state": "Room.DimmableLights[2].NameOfLight",
@@ -718,7 +718,7 @@
     {
       "state": "Room.DimmableLights[2].LightIsAtLevel",
       "type": "n",
-      "value": 12345
+      "value": 33000
     },
     {
       "state": "Room.DimmableLights[3].NameOfLight",
@@ -728,7 +728,7 @@
     {
       "state": "Room.DimmableLights[3].LightIsAtLevel",
       "type": "n",
-      "value": 54321
+      "value": 33000
     }, 
     {
       "state": "Room.DimmableLights[4].NameOfLight",
@@ -738,7 +738,7 @@
     {
       "state": "Room.DimmableLights[4].LightIsAtLevel",
       "type": "n",
-      "value": 234
+      "value": 33000
     },
     {
       "state": "Room.DimmableLights[5].NameOfLight",
@@ -748,7 +748,7 @@
     {
       "state": "Room.DimmableLights[5].LightIsAtLevel",
       "type": "n",
-      "value": 60000
+      "value": 33000
     },
     {
       "state": "Room.NumberOfScenes",

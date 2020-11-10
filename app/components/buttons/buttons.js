@@ -16,8 +16,6 @@ var buttonsModule = (function () {
      * All public or private methods which need to call on init
      */
     var buttonsPage = document.querySelector('.buttons-page');
-    buttonsPage.addEventListener('afterLoad', buttonsInit);
-
     /**
      * All public method and properties exporting here
      */

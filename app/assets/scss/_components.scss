@@ -100,13 +100,35 @@
     }
   }
 
-  .navbar-action-right {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 50%;
-    align-items: center;
-    justify-content: flex-end;
+  .navbar-action-center{
+    padding-right: 45%;
   }
+
+  .navbar-action-left{
+    .back-arrow{
+      color: #ffffff;
+      font-size: 30px;
+    }
+    .header-titles{
+      color: #ffffff;
+      align-items: center;
+      background-color: transparent;
+    }
+  }
+
+  .navbar-action-left2{
+    padding-right: 35%;
+    .volume-mute{
+      color: #ffffff;
+      font-size:30px;
+    }
+    .header-titles{
+      color: #ffffff;
+      align-items: center;
+      background-color: transparent;
+    }
+  }
+  
 
   @include media-breakpoint-down(sm) {
     height: $header-height-sm;
@@ -376,10 +398,31 @@
 
 // source page
 .source-page {
+
+  .time-modal{
+    width:1300px; 
+    background: #E4E7E6; 
+    opacity:0.8; 
+    text-align: center; 
+    float: center;
+
+    .cancel-button {
+      color:#000000;
+      background:#f07373;
+      border: none;
+       font-size:20px; 
+       float: center
+    }
+  }
+
+  p{
+    font-size: 30px;
+  }
+
   .source-list {
     display: block;
-    margin: 0 auto;
-    align-items: center;
+    text-align: center;
+    margin: 10rem auto;
     width: auto !important;
 
     .ch5-list-horizontal {
@@ -390,10 +433,11 @@
     .list-item {
       font-size: 1.8rem;
       font-weight: $font-weight-light;
-      padding: 2rem;
+      padding: 1rem;
       width: 25%;
 
       .ch5-button {
+        background-color: #F7F7F7;
         display: block;
         border-width: 1px;
         border-style: solid;
@@ -421,20 +465,21 @@
 
           i {
             display: flex;
-            font-size: 3rem;
+            font-size: 12rem;
             flex: auto;
+            margin-top: 2.5rem;
             align-items: center;
             justify-content: center;
           }
 
           .ch5-button--label {
-            margin-top: 1rem;
-            font-size: 1.4rem;
+            margin-top: 2.5rem;
+            font-size: 3rem;
           }
         }
 
         &--selected {
-          animation: shadow-pulse 0.5s ease-out;
+          animation: shadow-pulse 0.2s ease-out;
         }
       }
     }
@@ -460,14 +505,14 @@
       flex: 0;
 
       .list-item {
-        width: 50%;
+        width: 100%;
       }
     }
   }
 }
 
-// lighting page
-.lighting-page {
+// video sources page
+.video-sources-page {
   .examples-container {
     &>.row {
       height: calc(100% - 70.4px);

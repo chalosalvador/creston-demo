@@ -14,17 +14,17 @@ var videoModule = (function () {
     /**
      * This method is for open sidebar in smaller divice
      */
-    function videoNavbarOpen() {
+    /* function videoNavbarOpen() {
         videoNavbar.classList.add('open');
         event.stopPropagation();
-    }
+    } */
 
     /**
      * This method will invoke camera list in smaller screens on body click
      */
-    document.body.addEventListener('click', function () {
+    /* document.body.addEventListener('click', function () {
         videoNavbar.classList.remove('open');
-    });
+    }); */
 
     /**
      * Adding event listeners for all the camera list items
@@ -90,12 +90,12 @@ var videoModule = (function () {
      * All public or private methods which need to call on init
      */
     let videoPage = document.querySelector('.video-page');
-    videoPage.addEventListener('afterLoad', videoInit);
+    /* videoPage.addEventListener('afterLoad', videoInit); */
 
     /**
      * All public method and properties exporting here
      */
     return {
-        videoNavbarOpen: videoNavbarOpen
+        /* videoNavbarOpen: videoNavbarOpen */
     };
 }());

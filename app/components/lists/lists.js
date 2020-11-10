@@ -87,12 +87,12 @@ var listsModule = (function () {
     /**
      * This is for calculate dynamic height of list and setting on the element
      */
-    function setListHeight() {
+    /* function setListHeight() {
         let excludeSpace;
         window.innerWidth > 767 ? excludeSpace = 164 : excludeSpace = 105;
         let scrollHeight = window.innerHeight - (listScrollElement.getBoundingClientRect().top + excludeSpace);
         document.querySelector('.list-scroller').setAttribute('maxHeight', scrollHeight + 'px');
-    }
+    } */
 
     /**
      * This for collapse contact detail
@@ -114,14 +114,14 @@ var listsModule = (function () {
     /**
      * This method will invoke on window resize and orientationchange
      */
-    window.addEventListener('resize', setListHeight);
-    window.addEventListener('orientationchange', setListHeight);
+/*     window.addEventListener('resize', setListHeight);
+    window.addEventListener('orientationchange', setListHeight); */
 
     /**
      * All public or private methods which need to call on init
      */
     let listsPage = document.querySelector('.lists-page');
-    listsPage.addEventListener('afterLoad', listsInit);
+    /* listsPage.addEventListener('afterLoad', listsInit); */
 
     /**
      * All public method and properties exporting here
