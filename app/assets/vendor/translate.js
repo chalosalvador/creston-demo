@@ -37,7 +37,7 @@ var translateModule = (function () {
         // Trigger only once
         if (swiperObj.length !== navItemsSize) {
             navItemsSize = swiperObj.length;
-            appModule.triggerviewOnInit(swiperObj.length);
+            // appModule.triggerviewOnInit(swiperObj.length);
             appModule.navItemSize = swiperObj.length;
         }
 

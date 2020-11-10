@@ -1,9 +1,9 @@
 /*jslint es6 */
 /*global document, window, CrComLib, includeHtmlTpl */
-var sourceModule = (function () {
+var modeModule = (function () {
     'use strict';
 
-    console.log('holaaaaaaaaaaaa')
+    console.log('mode')
 
     var counterEl = document.querySelector('#counter');
     var counterVal = counterEl.innerHTML;
@@ -18,7 +18,10 @@ var sourceModule = (function () {
                 counterEl.innerHTML = counterVal; 
                 
             } else {
-    
+                var triggerview = document.querySelector('.triggerview');
+                var eventView = document.querySelector('#event-view');
+
+                triggerview.setActiveViewChild(eventView);
             }
         }, 1000)
     })

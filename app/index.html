@@ -58,49 +58,21 @@
         </nav>
         <!-- Header end -->
         <ch5-background receivestateurl="common_background_url" url="./assets/img/ch5-stone-light-bg.jpg"></ch5-background>
-        <ch5-triggerview class="triggerview" gestureable="true" endless="false">
-            <!-- Buttons start -->
+        <ch5-triggerview class="triggerview" gestureable="false" endless="false" disableAnimation="true">
+            <!-- Mode selection start -->
             <ch5-triggerview-child>
-                <ch5-import-htmlsnippet class="buttons-page" url="./components/buttons/buttons.html">
+                <ch5-import-htmlsnippet class="mode-page" url="./components/mode/mode.html">
                 </ch5-import-htmlsnippet>
             </ch5-triggerview-child>
-            <!-- Buttons end -->
-            <!-- List start -->
-            <ch5-triggerview-child>
-                <ch5-import-htmlsnippet class="lists-page" url="./components/lists/lists.html"></ch5-import-htmlsnippet>
-            </ch5-triggerview-child>
-            <!-- List end -->
-            <!-- Climate start -->
-            <ch5-triggerview-child>
-                <ch5-import-htmlsnippet class="source-page" url="./components/source/source.html">
+            <!-- Mode selection end -->
+
+            <!-- Event start -->
+            <ch5-triggerview-child id="event-view">
+                <ch5-import-htmlsnippet class="event-page" url="./components/event/event.html">
                 </ch5-import-htmlsnippet>
             </ch5-triggerview-child>
-            <!-- Climate end -->
-            <!-- Lighting start -->
-            <ch5-triggerview-child>
-                <ch5-import-htmlsnippet class="lighting-page" url="./components/lighting/lighting.html">
-                </ch5-import-htmlsnippet>
-            </ch5-triggerview-child>
-            <!-- Lighting end -->
-            <!-- Video start -->
-            <ch5-triggerview-child>
-                <ch5-import-htmlsnippet class="video-page" url="./components/video/video.html"></ch5-import-htmlsnippet>
-            </ch5-triggerview-child>
-            <!-- Video end -->
+            <!-- Event end -->
         </ch5-triggerview>
-        <ch5-list class="swiper-thumb" orientation="horizontal" maxHeight="auto" indexId="idx" itemHeight="100%"
-            receiveStateSize="nav.items.size">
-            <template>
-                <div class="horizontal-list-item">
-                    <ch5-button customClass="thumb-btn-{{idx}}" type="text" shape="rectangle"
-                        receiveStateSelected="active_state_class_{{idx}}" receiveStateLabel="nav_label_{{idx}}"
-                        iconurl="./assets/img/navigation/nav_icon_{{idx}}.svg" iconPosition="bottom"></ch5-button>
-                </div>
-            </template>
-        </ch5-list>
-        <a class="thumb-action" onclick="appModule.openThumbNav()" id="floatingArrow"><svg
-                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 24">
-                <path d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z" /></svg></a>
     </section>
     <!-- inject:js -->
 
