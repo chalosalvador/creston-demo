@@ -26,7 +26,28 @@
         {"type":"b", "state": "SourceList.Sources[0].SourceIsSelected", "logic": "set", "value": false},
         {"type":"b", "state": "SourceList.Sources[1].SourceIsSelected", "logic": "set", "value": false},
         {"type":"b", "state": "SourceList.Sources[2].SourceIsSelected", "logic": "set", "value": true}
-    ]}                
+    ]},
+    {
+      "type" : "b",
+      "event" : "SourceList.Sources[0].SetSourceNoSelected",
+      "trigger" : true,
+      "actions" : [
+        {"type":"b", "state": "SourceList.Sources[0].SourceIsSelected", "logic": "set", "value": false}
+    ]},
+    {
+      "type" : "b",
+      "event" : "SourceList.Sources[1].SetSourceNoSelected",
+      "trigger" : true,
+      "actions" : [
+        {"type":"b", "state": "SourceList.Sources[1].SourceIsSelected", "logic": "set", "value": false}
+    ]},
+    {
+      "type" : "b",
+      "event" : "SourceList.Sources[2].SetSourceNoSelected",
+      "trigger" : true,
+      "actions" : [
+        {"type":"b", "state": "SourceList.Sources[2].SourceIsSelected", "logic": "set", "value": false}
+    ]}                   
   ],
   "onStart": [{
       "state": "SourceList.NumberOfSources",

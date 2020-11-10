@@ -44,19 +44,19 @@
         </nav>
         <!-- Header end -->
 
-        <ch5-triggerview>
-            <!-- Source start-->
-            <ch5-triggerview-child receivestatehidepulse="show" receivestateshow="back-home">
-                <ch5-import-htmlsnippet class="source-page" url="./components/source/source.html">
+        <ch5-triggerview class="triggerview" gestureable="false" endless="false" disableAnimation="true">
+            <!-- Mode start-->
+            <ch5-triggerview-child id="mode-view" receivestatehidepulse="show" receivestateshow="back-home">
+                <ch5-import-htmlsnippet class="mode-page" url="./components/mode/mode.html">
                 </ch5-import-htmlsnippet>
             </ch5-triggerview-child>
-            <!-- Source end -->
-            <!-- Video Sources start -->
-            <ch5-triggerview-child  receivestateshow="show">
-                <ch5-import-htmlsnippet class="video-sources-page" url="./components/video-sources/video-sources.html">
+            <!-- Mode end -->
+            <!-- Event start -->
+            <ch5-triggerview-child id="event-view">
+                <ch5-import-htmlsnippet class="event-page" url="./components/event/event.html">
                 </ch5-import-htmlsnippet>
             </ch5-triggerview-child>
-            <!-- Video Sources end -->
+            <!-- Event end -->
         </ch5-triggerview>
     
     </section>

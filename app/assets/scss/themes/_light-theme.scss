@@ -264,6 +264,7 @@ $ch5-light-gradient-buttons: map-merge(("peach": $ch5-light-gradient-btn-peach,
   // lighting page
   // ch5 list
   ch5-list.ch5-custom-list {
+
     .ch5-button--default.ch5-button--pressed {
       background-color: $sidebar-light-action-hover;
     }
@@ -277,7 +278,7 @@ $ch5-light-gradient-buttons: map-merge(("peach": $ch5-light-gradient-btn-peach,
       .ch5-button.ch5-button--default {
         background-color: transparent;
         color: $ch5-black;
-        width: 0;
+        font-size: 2rem;
       }
 
       &~ch5-button.lighting-button .ch5-button.ch5-button--default {
@@ -290,6 +291,7 @@ $ch5-light-gradient-buttons: map-merge(("peach": $ch5-light-gradient-btn-peach,
   .ch5-slider {
     .noUi-connect {
       background-color: $ch5-white;
+      background: $ch5-white;
     }
 
     &.ch5-slider--orientation--vertical .noUi-target {

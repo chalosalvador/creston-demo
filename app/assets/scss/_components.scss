@@ -396,8 +396,8 @@
   }
 }
 
-// source page
-.source-page {
+// mode page
+.mode-page {
 
   .time-modal{
     width:1300px; 
@@ -511,12 +511,69 @@
   }
 }
 
-// video sources page
-.video-sources-page {
+// event page
+.event-page {
   .examples-container {
+    background-color: #BFBFBF;
     &>.row {
+      margin-top: 5%;
+      margin-left: 2%;
       height: calc(100% - 70.4px);
     }
+
+    .microphones {
+      margin-right: 2%; 
+      background: #EEEEEE; 
+      height: 90%;
+    }
+
+    .no-gutters > .col, .no-gutters > [class*="col-"] {
+      height: 90%;
+      background: #EEEEEE; 
+      margin-right: 2%;
+      width:50%;
+
+      ch5-image {
+        width: 95%;
+        margin-left: 30%;
+      }
+
+      ch5-slider.zoom-sliders{
+          height: 220px;
+      }
+
+      .ch5-slider.ch5-slider--orientation--vertical .noUi-target {
+        width: 13px;
+        border-color: #000000;
+        margin-right: 95%;
+      }
+
+      .ch5-slider.ch5-slider--orientation--vertical.ch5-slider--shape--circle.ch5-slider--handle-size--regular .noUi-handle {
+        width: 25px;
+        height: 25px;
+        left: -7px;
+        top: -17px;
+        border-color: #000000;
+      }
+
+      
+      .ch5-slider .noUi-connect {
+        background: #ffffff;
+        left: 0;
+      }
+
+      p {
+        color: #000000;
+      }
+
+      .camera-button {
+        font-size: 20px;
+        border-color: #000000; 
+        color: #000000; 
+        background-color: transparent; 
+        margin: 20px 50px; 
+      }
+  }
 
     @include media-breakpoint-down(sm) {
       &>.row {
@@ -531,6 +588,12 @@
         position: relative;
         z-index: 10;
 
+        .camera-button {
+          border: 1px solid #000000;
+          background-color: transparent;
+          color: #000000;
+          font-size: 50px;
+          }
         &.open {
           transition: transform 300ms ease-out;
           transform: translateX(-100%);
@@ -591,6 +654,7 @@
 
   .lighting-slider {
     text-align: center;
+    width: 10%;
   }
 
   .pulse-button-lighting {

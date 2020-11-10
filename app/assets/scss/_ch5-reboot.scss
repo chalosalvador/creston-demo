@@ -20,17 +20,43 @@
 }
 
 // lighting
+
 ch5-list.ch5-custom-list {
   display: block;
+  width: 5px;
+
+  .ch5-slider.ch5-slider--shape--circle .noUi-connects, .ch5-slider.ch5-slider--shape--circle .noUi-target {
+    border-radius: 8px;
+    border-color: #000000;
+    background-color: #ffffff;
+  } 
+
+  .ch5-slider .noUi-connect {
+    background: #ffffff;
+  }
+
+
+
+  .ch5-slider.ch5-slider--orientation--vertical.ch5-slider--shape--circle.ch5-slider--handle-size--regular .noUi-handle {
+    width: 25px;
+    height: 25px;
+    border-color: #000000;
+    left: -5px;
+    top: -17px;
+  }
 
   .label {
     display: block;
-    color: $white;
-    margin-bottom: 0.5rem;
+    color: #000000;
+    margin-top: 1rem;
   }
 
   .lighting-button .ch5-button--default {
     border: 0;
+    background-color: transparent;
+    color: #000000;
+    size: 2rem;
+    margin-left: 10%;
 
     .cb-btn {
       @include size(70px);
@@ -61,10 +87,12 @@ ch5-list.ch5-custom-list {
   }
 
   // ch5 list vertical orientation
-  .ch5-list-vertical {
+
+  .ch5-list-horizontal {
 
     &>.list-item {
       padding: 2rem;
+      
     }
 
     .vertical-list-item {
@@ -76,7 +104,7 @@ ch5-list.ch5-custom-list {
 
       .ch5-slider {
         .noUi-horizontal {
-          height: 10px;
+          height: 12px;
         }
 
         &.ch5-slider--orientation--horizontal.ch5-slider--shape--circle.ch5-slider--handle-size--regular .noUi-handle {
@@ -103,10 +131,10 @@ ch5-list.ch5-custom-list {
     height: 100%;
 
     &>.list-item {
-      padding: 1rem 2.5rem;
+      padding: 0.5rem 1rem;
       vertical-align: top;
       flex: auto;
-      min-width: 150px;
+      min-width: 40px;
       overflow-y: hidden;
     }
 
@@ -123,6 +151,7 @@ ch5-list.ch5-custom-list {
 
         .noUi-connect {
           width: 10px;
+          background-color: #ffffff;
         }
       }
     }
@@ -132,13 +161,13 @@ ch5-list.ch5-custom-list {
 
       &>.list-item {
         padding: 1rem;
-        min-width: 100px;
+        min-width: 55px;
       }
     }
 
     @include media-breakpoint-down(xs) {
       &>.list-item {
-        min-width: 110px;
+        min-width: 55px;
       }
     }
   }
