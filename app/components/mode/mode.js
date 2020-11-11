@@ -27,6 +27,16 @@ var modeModule = (function () {
         }, 1000)
     })
 
+    function onClick( idx ){
+
+        if ( idx === "SourceList.Sources[1].SetSourceSelected" ) {
+            console.log( "Television button pressed!" );
+        } 
+        if ( idx === "SourceList.Sources[2].SetSourceSelected" ) {
+            console.log( "Receive Stream button pressed!" );
+        }
+    }
+
     function cancelInterval(){
         clearInterval(timer);
         counterVal = 7;
@@ -37,6 +47,7 @@ var modeModule = (function () {
      * All public method and properties exporting here
      */
     return {
-        cancelInterval: cancelInterval
+        cancelInterval: cancelInterval,
+        onClick: onClick
     };
 }());
