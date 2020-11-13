@@ -3,6 +3,7 @@
 var modeModule = (function () {
     'use strict';
 
+    
     console.log('mode-page');
 
     var counterEl = document.querySelector('#counter');
@@ -21,8 +22,13 @@ var modeModule = (function () {
             } else {
                 var triggerview = document.querySelector('.triggerview');
                 var eventView = document.querySelector('#event-view');
+                var backPage = document.getElementById('back-page');
 
+                backPage.hidden = false;
                 triggerview.setActiveViewChild(eventView);
+                clearInterval(timer);
+                counterVal = 7;
+                counterEl.innerHTML = 7;
             }
         }, 1000)
     })

@@ -25,7 +25,7 @@ var eventModule = (function () {
     });
 
     function onClickPresentCamera(){
-        console.log('Present Camera Button pressed');
+        console.log('Presenter Camera Button pressed');
     }
 
     function onClickPreset1(){

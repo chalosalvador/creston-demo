@@ -8,12 +8,10 @@ var appModule = (function () {
     let triggerview = document.querySelector('.triggerview');
     let navbarThumb = document.querySelector('.swiper-thumb');
     let activeIndex = 0;
-    let themeNav = document.getElementById('changeTheme');
     let appName = null;
     let appVersion = null;
     let errorClass = 'version-error';
     let previousActiveIndex = -1;
-    let themeTimer;
     const NAV_PAGE_COUNT = 5; // Number of buttons in the navigation menu
 
     /**
@@ -225,6 +223,12 @@ var appModule = (function () {
 
     function onClickBack(){
         console.log('Back Button pressed');
+        
+        var triggerview = document.querySelector('.triggerview');
+        var backPage = document.getElementById('back-page');
+
+        triggerview.previousViewChild();
+        backPage.hidden = true;
     }
 
     function onClickMute() {
