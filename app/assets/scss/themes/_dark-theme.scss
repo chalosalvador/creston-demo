@@ -112,13 +112,13 @@ $ch5-dark-gradient-buttons: map-merge(("peach": $ch5-dark-gradient-btn-peach,
 
   // navbars
   .navbar-dark {
-    background-color: $ch5-dark-navbar-bg;
+    background-color: #18858A;
 
     &.navbar-default {
 
       &,
       .navbar-nav {
-        background-color: $ch5-dark-navbar-default-bg;
+        background-color: #18858A;
       }
 
       .btn-link,

@@ -73,6 +73,42 @@
       ]
     },
     {
+      "type": "n",
+      "event": "Room.DimmableLights[6].SetLightLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.DimmableLights[6].LightIsAtLevel",
+          "type": "n",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "n",
+      "event": "Room.DimmableLights[7].SetLightLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.DimmableLights[7].LightIsAtLevel",
+          "type": "n",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "n",
+      "event": "Room.Camera.SetLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Camera.IsAtLevel",
+          "type": "n",
+          "logic": "link"
+        }
+      ]
+    },
+    {
       "type": "b",
       "event": "Room.DimmableLights[0].TurnLightOff",
       "trigger": true,
@@ -169,6 +205,42 @@
       "actions": [
         {
           "state": "Room.DimmableLights[5].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.DimmableLights[6].TurnLightOff",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.DimmableLights[6].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.DimmableLights[7].TurnLightOff",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.DimmableLights[7].LightIsAtLevel",
           "type": "object",
           "logic": "set",
           "value": {
@@ -290,6 +362,42 @@
     },
     {
       "type": "b",
+      "event": "Room.DimmableLights[6].TurnLightOn",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.DimmableLights[6].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 65535,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.DimmableLights[7].TurnLightOn",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.DimmableLights[7].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 65535,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
       "event": "Room.Scenes[0].TriggerSceneStart",
       "trigger": true,
       "actions": [
@@ -350,6 +458,28 @@
         },
         {
           "state": "Room.DimmableLights[5].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 65535,
+              "time": 300
+            }
+          }
+        },
+        {
+          "state": "Room.DimmableLights[6].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 65535,
+              "time": 300
+            }
+          }
+        },
+        {
+          "state": "Room.DimmableLights[7].LightIsAtLevel",
           "type": "object",
           "logic": "set",
           "value": {
@@ -431,6 +561,28 @@
               "time": 300
             }
           }
+        },
+        {
+          "state": "Room.DimmableLights[6].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 300
+            }
+          }
+        },
+        {
+          "state": "Room.DimmableLights[7].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 300
+            }
+          }
         }
       ]
     },
@@ -501,6 +653,28 @@
           "value": {
             "rcb": {
               "value": 64000,
+              "time": 300
+            }
+          }
+        },
+        {
+          "state": "Room.DimmableLights[6].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 55555,
+              "time": 300
+            }
+          }
+        },
+        {
+          "state": "Room.DimmableLights[7].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 55555,
               "time": 300
             }
           }
@@ -577,6 +751,28 @@
               "time": 300
             }
           }
+        },
+        {
+          "state": "Room.DimmableLights[6].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 32000,
+              "time": 300
+            }
+          }
+        },
+        {
+          "state": "Room.DimmableLights[7].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 32000,
+              "time": 300
+            }
+          }
         }
       ]
     },
@@ -650,6 +846,28 @@
               "time": 300
             }
           }
+        },
+        {
+          "state": "Room.DimmableLights[6].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 2000,
+              "time": 300
+            }
+          }
+        },
+        {
+          "state": "Room.DimmableLights[7].LightIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 2000,
+              "time": 300
+            }
+          }
         }
       ]
     }
@@ -661,9 +879,14 @@
       "value": "Great Room"
     },
     {
+      "state": "Room.Camera.IsAtLevel",
+      "type": "n",
+      "value": 22000
+    },
+    {
       "state": "Room.NumberOfLights",
       "type": "n",
-      "value": 6
+      "value": 8
     },
     {
       "state": "Room.Scenes[0].NameOfScene",
@@ -693,62 +916,122 @@
     {
       "state": "Room.DimmableLights[0].NameOfLight",
       "type": "s",
-      "value": "Lamp"
+      "value": "Hand Held"
+    },  
+    {
+      "state": "Room.DimmableLights[0].NumberOfMicrophone",
+      "type": "s",
+      "value": "1"
     },     
     {
       "state": "Room.DimmableLights[0].LightIsAtLevel",
       "type": "n",
-      "value": 20000
+      "value": 33000
     },
     {
       "state": "Room.DimmableLights[1].NameOfLight",
       "type": "s",
-      "value": "Sconces"
-    },    
+      "value": "Hand Held"
+    },   
+    {
+      "state": "Room.DimmableLights[1].NumberOfMicrophone",
+      "type": "s",
+      "value": "2"
+    },  
     {
       "state": "Room.DimmableLights[1].LightIsAtLevel",
       "type": "n",
-      "value": 30000
+      "value": 33000
     },
     {
       "state": "Room.DimmableLights[2].NameOfLight",
       "type": "s",
-      "value": "Downlights"
+      "value": "Hand Held"
     },    
+    {
+      "state": "Room.DimmableLights[2].NumberOfMicrophone",
+      "type": "s",
+      "value": "3"
+    }, 
     {
       "state": "Room.DimmableLights[2].LightIsAtLevel",
       "type": "n",
-      "value": 12345
+      "value": 33000
     },
     {
       "state": "Room.DimmableLights[3].NameOfLight",
       "type": "s",
-      "value": "Media Wall"
+      "value": "Hand Held"
     },    
+    {
+      "state": "Room.DimmableLights[3].NumberOfMicrophone",
+      "type": "s",
+      "value": "4"
+    }, 
     {
       "state": "Room.DimmableLights[3].LightIsAtLevel",
       "type": "n",
-      "value": 54321
+      "value": 33000
     }, 
     {
       "state": "Room.DimmableLights[4].NameOfLight",
       "type": "s",
-      "value": "Tracks"
+      "value": "Lapel"
     },      
+    {
+      "state": "Room.DimmableLights[4].NumberOfMicrophone",
+      "type": "s",
+      "value": "1"
+    }, 
     {
       "state": "Room.DimmableLights[4].LightIsAtLevel",
       "type": "n",
-      "value": 234
+      "value": 33000
     },
     {
       "state": "Room.DimmableLights[5].NameOfLight",
       "type": "s",
-      "value": "Pendants"
-    },    
+      "value": "Lapel"
+    },  
+    {
+      "state": "Room.DimmableLights[5].NumberOfMicrophone",
+      "type": "s",
+      "value": "2"
+    },   
     {
       "state": "Room.DimmableLights[5].LightIsAtLevel",
       "type": "n",
-      "value": 60000
+      "value": 33000
+    },
+    {
+      "state": "Room.DimmableLights[6].NameOfLight",
+      "type": "s",
+      "value": "Lapel"
+    },    
+    {
+      "state": "Room.DimmableLights[6].NumberOfMicrophone",
+      "type": "s",
+      "value": "3"
+    }, 
+    {
+      "state": "Room.DimmableLights[6].LightIsAtLevel",
+      "type": "n",
+      "value": 33000
+    },
+    {
+      "state": "Room.DimmableLights[7].NameOfLight",
+      "type": "s",
+      "value": "Lapel"
+    },    
+    {
+      "state": "Room.DimmableLights[7].NumberOfMicrophone",
+      "type": "s",
+      "value": "4"
+    }, 
+    {
+      "state": "Room.DimmableLights[7].LightIsAtLevel",
+      "type": "n",
+      "value": 33000
     },
     {
       "state": "Room.NumberOfScenes",

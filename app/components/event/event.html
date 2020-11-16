@@ -1,0 +1,72 @@
+<section class="examples-container">
+  <div class="row no-gutters">
+    <div class="col microphones">
+      <ch5-list class="ch5-custom-list" style="align-items: center;" maxHeight="100%" orientation="horizontal" indexId="idx"
+        scrollbar="true" receiveStateSize="Room.NumberOfLights">
+        <template>
+          <div class="vertical-list-item">
+            <span class="label" style="text-align: center;" data-ch5-textcontent="Room.DimmableLights[{{idx}}].NameOfLight">Label</span>
+            <span class="label" style="text-align: center;" data-ch5-textcontent="Room.DimmableLights[{{idx}}].NumberOfMicrophone">Label</span>
+            <div class="align-items-center">
+              <div class="row">
+                <ch5-slider class="lighting-sliders" stretch="width" handleShape="circle"
+                sendEventOnChange="Room.DimmableLights[{{idx}}].SetLightLevel"
+                receiveStateValue="Room.DimmableLights[{{idx}}].LightIsAtLevel" orientation="vertical"></ch5-slider>
+              </div>
+                
+              <div class="row">
+                <ch5-button class="lighting-button" shape="circle"
+                sendEventOnClick="Room.DimmableLights[{{idx}}].TurnLightOff" iconClass="fas fa-microphone-slash">
+                </ch5-button>
+              </div>
+            </div>
+          </div>
+        </template>
+      </ch5-list>
+    </div>
+    <aside class="col lighting-sidebar" id="eventSidebar">
+      <div class="row">
+        <div class="col">
+          <ch5-button customclass="camera-button" shape="rectangle"label="Presenter Camera"
+          onclick="eventModule.onClickPresentCamera()">
+        </ch5-button>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col">
+          <ch5-image url="./assets/img/camera-buttons.png"></ch5-image>
+        </div>
+        <div class="col">
+          <div>
+            <div class="align-items-center" style="text-align: center;">
+                <p>Zoom in</p>
+                <ch5-slider class="zoom-sliders" stretch="width" handleShape="circle"
+                sendEventOnChange="Room.Camera.SetLevel"
+                receiveStateValue="Room.Camera.IsAtLevel"
+                receiveStateValue="2000" orientation="vertical"></ch5-slider>
+                <p>Zoom out</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <ch5-button customclass="camera-button" shape="rectangle" label="Preset 1"
+          onclick="eventModule.onClickPreset1()">
+          </ch5-button>
+        </div>
+        <div class="col-4">
+          <ch5-button customclass="camera-button" shape="rectangle" label="Preset 2"
+          onclick="eventModule.onClickPreset2()">
+          </ch5-button>
+        </div>
+        <div class="col-4">
+          <ch5-button customclass="camera-button" shape="rectangle" label="Preset 3"
+          onclick="eventModule.onClickPreset3()">
+          </ch5-button>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
