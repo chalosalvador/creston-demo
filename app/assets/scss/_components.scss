@@ -400,14 +400,16 @@
 .mode-page {
 
   .time-modal{
-    width:1300px; 
+    width:97%; 
+    height: 85%;
     background: #E4E7E6; 
-    opacity:0.8; 
+    background-color: rgba(255, 255, 255, 0.6);
     text-align: center; 
     float: center;
 
     .cancel-button {
       color:#000000;
+      margin-top: 25%;
       background:#f07373;
       border: none;
        font-size:20px; 
@@ -416,7 +418,7 @@
   }
 
   p{
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .source-list {
