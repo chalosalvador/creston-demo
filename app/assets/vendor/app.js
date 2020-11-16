@@ -20,7 +20,7 @@ var appModule = (function () {
      * This is public method to change the theme
      * @param {string} theme pass theme type like 'LIGHT', 'DARK'
      */
-    function changeTheme(theme) {
+    /* function changeTheme(theme) {
         // add active class
         let current = themeNav.getElementsByClassName('active');
         if (current.length > 0) {
@@ -46,7 +46,7 @@ var appModule = (function () {
                 CrComLib.publishEvent('s', 'common_background_url', './assets/img/ch5-stone-dark-bg.jpg');
             }
         }, 500);
-    }
+    } */
 
     /**
      * This is public method for bottom navigation to navigate to next page
@@ -201,10 +201,6 @@ var appModule = (function () {
      */
     function loadEmulator() {
 
-        // List Emulator
-        serviceModule.loadJSON("./assets/data/list-emulator.json", function (response) {
-            serviceModule.initEmulator(JSON.parse(response));
-        });
         // Source Emulator
         serviceModule.loadJSON("./assets/data/source-emulator.json", function (response) {
             serviceModule.initEmulator(JSON.parse(response));
@@ -227,20 +223,20 @@ var appModule = (function () {
         event.stopPropagation();
     }
 
-    /**
-     * This method will invoke on body click
-     */
-    document.body.addEventListener('click', function (event) {
-        translateModule.currentLng.classList.remove('open');
-        navbarThumb.classList.remove('open');
-    });
+    function onClickBack(){
+        console.log('Back Button pressed');
+    }
+
+    function onClickMute() {
+        console.log('Mute Button pressed');
+    }
 
     /**
      * Load the emulator, theme, default language and listeners
      */
     function onLoadInit() {
         loadEmulator();
-        changeTheme('LIGHT');
+/*         changeTheme('LIGHT'); */
         translateModule.getLanguage(translateModule.defaultLng);
         getAppVersionInfo();
         versionInformation();
@@ -249,12 +245,12 @@ var appModule = (function () {
                 addNavItemClickListener(idx);
             }
         }, 1000);
-        triggerview.addEventListener('select', function (event) {
+        /* triggerview.addEventListener('select', function (event) {
             setTimeout(() => {
                 activeIndex = event.detail;
                 navActiveState(activeIndex);
             });
-        });
+        }); */
     }
 
     document.addEventListener('DOMContentLoaded', onLoadInit);
@@ -263,10 +259,12 @@ var appModule = (function () {
      * All public method and properties exporting here
      */
     return {
-        changeTheme: changeTheme,
+        /* changeTheme: changeTheme, */
         triggerviewOnInit: triggerviewOnInit,
         openLngMenu: openLngMenu,
         openThumbNav: openThumbNav,
+        onClickBack: onClickBack,
+        onClickMute: onClickMute,
         checkElement: checkElement,
         addClassOnClick: addClassOnClick
     };

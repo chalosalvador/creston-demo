@@ -26,7 +26,28 @@
         {"type":"b", "state": "SourceList.Sources[0].SourceIsSelected", "logic": "set", "value": false},
         {"type":"b", "state": "SourceList.Sources[1].SourceIsSelected", "logic": "set", "value": false},
         {"type":"b", "state": "SourceList.Sources[2].SourceIsSelected", "logic": "set", "value": true}
-    ]}                  
+    ]},
+    {
+      "type" : "b",
+      "event" : "SourceList.Sources[0].SetSourceNoSelected",
+      "trigger" : true,
+      "actions" : [
+        {"type":"b", "state": "SourceList.Sources[0].SourceIsSelected", "logic": "set", "value": false}
+    ]},
+    {
+      "type" : "b",
+      "event" : "SourceList.Sources[1].SetSourceNoSelected",
+      "trigger" : true,
+      "actions" : [
+        {"type":"b", "state": "SourceList.Sources[1].SourceIsSelected", "logic": "set", "value": false}
+    ]},
+    {
+      "type" : "b",
+      "event" : "SourceList.Sources[2].SetSourceNoSelected",
+      "trigger" : true,
+      "actions" : [
+        {"type":"b", "state": "SourceList.Sources[2].SourceIsSelected", "logic": "set", "value": false}
+    ]}                   
   ],
   "onStart": [{
       "state": "SourceList.NumberOfSources",
@@ -37,28 +58,27 @@
     {
       "state": "SourceList.Sources[0].NameOfSource",
       "type": "s",
-      "value": "HDMI"
+      "value": "Presentation"
     }, {
       "state": "SourceList.Sources[1].NameOfSource",
       "type": "s",
-      "value": "Airboard"
+      "value": "Television"
     }, {
       "state": "SourceList.Sources[2].NameOfSource",
       "type": "s",
-      "value": "Laptop"
-    },
-    {
+      "value": "Receive Stream"
+    }, {
       "state": "SourceList.Sources[0].IconClassOfSource",
       "type": "s",
-      "value": "fas fa-tv"
+      "value": "fas fa-chalkboard-teacher"
     }, {
       "state": "SourceList.Sources[1].IconClassOfSource",
       "type": "s",
-      "value": "fas fa-chalkboard"
+      "value": "fas fa-tv"
     }, {
       "state": "SourceList.Sources[2].IconClassOfSource",
       "type": "s",
-      "value": "fas fa-laptop"
+      "value": "fas fa-stream"
     }
   ]
 }

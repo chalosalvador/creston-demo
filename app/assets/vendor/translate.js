@@ -1,4 +1,4 @@
-/*global document, CrComLib, appModule, serviceModule, sourceModule, lightingModule */
+/*global document, CrComLib, appModule, serviceModule, sourceModule, videoSourceModule */
 var translateModule = (function () {
     'use strict';
     /**

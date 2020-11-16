@@ -1,0 +1,29 @@
+<section class="details-container">
+  <ch5-list class="source-list" indexId="idx" size="3" maxWidth="1800px" receiveStateSize="SourceList.NumberOfSources"
+    orientation="horizontal">
+    <template>
+      <div class="horizontal-list-item">
+        <ch5-button customClass="source-btn-{{idx}}" class="d-block" 
+          customstyle="background-color: #EEEEEE" type="text" shape="rectangle"
+          receivestatelabel="SourceList.Sources[{{idx}}].NameOfSource"
+          receivestateiconclass="SourceList.Sources[{{idx}}].IconClassOfSource" iconPosition="top"
+          receiveStateSelected="SourceList.Sources[{{idx}}].SourceIsSelected"
+          sendEventOnClick="SourceList.Sources[{{idx}}].SetSourceSelected"></ch5-button>
+      </div>
+      
+    </template>
+  </ch5-list>
+  <ch5-modal-dialog id="modal-counter" 
+      receiveStateShowPulse="SourceList.Sources[0].SourceIsSelected" receivestatehidepulse="SourceList.Sources[0].SetSourceNoSelected" 
+      hidecancelbutton="true"
+      hideOkButton="true"
+      customclass="time-modal"></ch5-button>
+      <p >Are you sure you want enter Event mode?</p>
+      <p >Projection screens will automatically lower in: </p>
+      <div style="font-size: 100px;" id='counter'>7</div>
+      <p >Seconds</p>
+      <ch5-button customclass="cancel-button" onclick="modeModule.cancelInterval()" label="Cancel" shape="rectangle"
+      sendeventonclick="SourceList.Sources[0].SetSourceNoSelected"></ch5-button>
+  </ch5-modal-dialog>
+  
+</section>
