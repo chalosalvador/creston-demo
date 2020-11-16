@@ -15,6 +15,7 @@ var appModule = (function () {
     let previousActiveIndex = -1;
     let themeTimer;
     const NAV_PAGE_COUNT = 5; // Number of buttons in the navigation menu
+    var count = 0;
 
     /**
      * This is public method to change the theme
@@ -228,7 +229,21 @@ var appModule = (function () {
     }
 
     function onClickMute() {
-        console.log('Mute Button pressed');
+        var property = document.getElementById('mute');
+        var title = document.getElementById('title-mute');
+
+        if (count === 1){
+            console.log("Mute button not active");
+            property.style.color = "#FFFFFF";
+            title.style.color = "#FFFFFF";
+            count=0;        
+        }
+        else{
+            console.log("Mute button active");
+            property.style.color = "red";
+            title.style.color = "red";
+            count=1;
+        }
     }
 
     /**
