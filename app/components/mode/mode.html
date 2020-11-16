@@ -8,7 +8,8 @@
           receivestatelabel="SourceList.Sources[{{idx}}].NameOfSource"
           receivestateiconclass="SourceList.Sources[{{idx}}].IconClassOfSource" iconPosition="top"
           receiveStateSelected="SourceList.Sources[{{idx}}].SourceIsSelected"
-          sendEventOnClick="SourceList.Sources[{{idx}}].SetSourceSelected"></ch5-button>
+          sendEventOnClick="SourceList.Sources[{{idx}}].SetSourceSelected"
+          onclick="modeModule.onClick('SourceList.Sources[{{idx}}].SetSourceSelected')"></ch5-button>
       </div>
       
     </template>
