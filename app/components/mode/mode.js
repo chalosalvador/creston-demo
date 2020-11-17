@@ -8,11 +8,13 @@ var modeModule = (function () {
 
     var counterEl = document.querySelector('#counter');
     var counterVal = counterEl.innerHTML;
+    var triggerview = document.querySelector('.triggerview');
     var timer = '';
 
     var modal = document.querySelector('#modal-counter');
 
     modal.addEventListener('afterShow', function(e){
+        triggerview.gestureable = false;
         console.log('show');
         timer = setInterval(function(){
             if(counterVal > 0 ) {
@@ -24,7 +26,6 @@ var modeModule = (function () {
                 clearInterval(timer);
                 counterVal = 7;
                 counterEl.innerHTML = 7;
-                var triggerview = document.querySelector('.triggerview');
                 var eventView = document.querySelector('#event-view');
                 var backPage = document.getElementById('back-page');
                 var button = document.querySelector('#source-btn');
@@ -40,15 +41,23 @@ var modeModule = (function () {
 
     function onClick( idx ){
 
+        if( idx === "SourceList.Sources[0].SetSourceSelected" ) {
+            modal.show = true;
+        }
+
         if ( idx === "SourceList.Sources[1].SetSourceSelected" ) {
+            triggerview.gestureable = false;
             console.log( "Television button pressed!" );
         } 
+
         if ( idx === "SourceList.Sources[2].SetSourceSelected" ) {
+            triggerview.gestureable = false;
             console.log( "Receive Stream button pressed!" );
         }
     }
 
     function cancelInterval(){
+        triggerview.gestureable = false;
         clearInterval(timer);
         counterVal = 7;
         counterEl.innerHTML = 7;

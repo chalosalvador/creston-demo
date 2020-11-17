@@ -232,6 +232,7 @@ var appModule = (function () {
         var backPage = document.getElementById('back-page');  
         
         triggerview.previousViewChild();
+        triggerview.gestureable = false;
         backPage.hidden = true;
     }
 
@@ -251,6 +252,7 @@ var appModule = (function () {
             title.style.color = "red";
             count=1;
         }
+        triggerview.gestureable = false;
     }
 
     /**

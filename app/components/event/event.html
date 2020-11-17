@@ -11,12 +11,12 @@
               <div class="row">
                 <ch5-slider class="lighting-sliders" stretch="width" handleShape="circle"
                 sendEventOnChange="Room.DimmableLights[{{idx}}].SetLightLevel"
-                receiveStateValue="Room.DimmableLights[{{idx}}].LightIsAtLevel" orientation="vertical"></ch5-slider>
+                receiveStateValue="Room.DimmableLights[{{idx}}].LightIsAtLevel" orientation="vertical" onclick="eventModule.gestureableClick()"></ch5-slider>
               </div>
                 
               <div class="row">
                 <ch5-button class="lighting-button" shape="circle"
-                sendEventOnClick="Room.DimmableLights[{{idx}}].TurnLightOff" iconClass="fas fa-microphone-slash">
+                sendEventOnClick="Room.DimmableLights[{{idx}}].TurnLightOff" onclick="eventModule.gestureableClick()" iconClass="fas fa-microphone-slash">
                 </ch5-button>
               </div>
             </div>
@@ -56,7 +56,7 @@
                 <ch5-slider class="zoom-sliders" stretch="width" handleShape="circle"
                 sendEventOnChange="Room.Camera.SetLevel"
                 receiveStateValue="Room.Camera.IsAtLevel"
-                receiveStateValue="2000" orientation="vertical"></ch5-slider>
+                receiveStateValue="2000" orientation="vertical" onclick="eventModule.gestureableClick()"></ch5-slider>
                 <p>Zoom out</p>
             </div>
           </div>

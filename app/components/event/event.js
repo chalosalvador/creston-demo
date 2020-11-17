@@ -6,6 +6,7 @@ var eventModule = (function () {
     console.log('video-source-show');
 
     let eventSideBar = document.getElementById('eventSideBar');
+    var triggerview = document.querySelector('.triggerview');
 
     /**
      * This method is for toggle sidebar in smaller divice
@@ -25,19 +26,27 @@ var eventModule = (function () {
     });
 
     function onClickPresentCamera(){
+        triggerview.gestureable = false;
         console.log('Presenter Camera Button pressed');
     }
 
     function onClickPreset1(){
+        triggerview.gestureable = false;
         console.log('Preset1 Button pressed');
     }
 
     function onClickPreset2(){
+        triggerview.gestureable = false;
         console.log('Preset2 Button pressed');
     }
 
     function onClickPreset3(){
+        triggerview.gestureable = false;
         console.log('Preset3 Button pressed');
+    }
+
+    function gestureableClick() {
+        triggerview.gestureable = false;
     }
 
 
@@ -53,18 +62,22 @@ var eventModule = (function () {
     }
 
     function onClickTop() {
+        triggerview.gestureable = false;
         console.log("Top button pressed!");
     }
 
     function onClickLeft() {
+        triggerview.gestureable = false;
         console.log("Left button pressed!");
     }
 
     function onClickRight() {
+        triggerview.gestureable = false;
         console.log("Right button pressed!");
     }
 
     function onClickBottom() {
+        triggerview.gestureable = false;
         console.log("Bottom button pressed!");
     }
 
@@ -86,6 +99,7 @@ var eventModule = (function () {
         onClickTop: onClickTop,
         onClickBottom: onClickBottom,
         onClickLeft: onClickLeft,
-        onClickRight: onClickRight
+        onClickRight: onClickRight,
+        gestureableClick: gestureableClick
     };
 }());
