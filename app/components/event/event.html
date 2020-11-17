@@ -1,6 +1,6 @@
 <section class="examples-container">
   <div class="row no-gutters">
-    <div class="col microphones">
+    <div class="col microphones" id="mic">
       <ch5-list class="ch5-custom-list" style="align-items: center;" maxHeight="100%" orientation="horizontal" indexId="idx"
         scrollbar="true" receiveStateSize="Room.NumberOfLights">
         <template>
@@ -35,7 +35,19 @@
       </div>
       <div class="row">
         <div class="col">
-          <ch5-image url="./assets/img/camera-buttons.png"></ch5-image>
+          <div class="row">
+            <ch5-image class="top-button" url="./assets/img/button.png" onclick="eventModule.onClickTop()"></ch5-image>
+          </div>
+
+          <div class="row">
+            <ch5-image class="left-button" url="./assets/img/button.png" onclick="eventModule.onClickLeft()"></ch5-image>
+            <ch5-image class="right-button" url="./assets/img/button.png" onclick="eventModule.onClickRight()"></ch5-image>
+          </div>
+
+          <div class="row">
+            <ch5-image class="bottom-button" url="./assets/img/button.png" onclick="eventModule.onClickBottom()"></ch5-image>
+          </div>
+          
         </div>
         <div class="col">
           <div>

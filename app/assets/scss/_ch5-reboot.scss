@@ -28,7 +28,7 @@ ch5-list.ch5-custom-list {
   .ch5-slider.ch5-slider--shape--circle .noUi-connects, .ch5-slider.ch5-slider--shape--circle .noUi-target {
     border-radius: 8px;
     border-color: #000000;
-    background-color: #ffffff;
+    background-color: transparent;
   } 
 
   .ch5-slider .noUi-connect {
@@ -59,7 +59,7 @@ ch5-list.ch5-custom-list {
     margin-left: 10%;
 
     .cb-btn {
-      @include size(70px);
+      @include size(73px);
     }
 
     .ch5-button--icon {

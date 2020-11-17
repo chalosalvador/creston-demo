@@ -1,4 +1,7 @@
 /*jslint es6 */
+
+//const { Ch5ModalDialog } = require("@crestron/ch5-crcomlib");
+
 /*global document, window, XMLHttpRequest, CrComLib, event, translateModule, setTimeout, requestAnimationFrame, serviceModule */
 var appModule = (function () {
     'use strict';
@@ -8,12 +11,10 @@ var appModule = (function () {
     let triggerview = document.querySelector('.triggerview');
     let navbarThumb = document.querySelector('.swiper-thumb');
     let activeIndex = 0;
-    let themeNav = document.getElementById('changeTheme');
     let appName = null;
     let appVersion = null;
     let errorClass = 'version-error';
     let previousActiveIndex = -1;
-    let themeTimer;
     const NAV_PAGE_COUNT = 5; // Number of buttons in the navigation menu
     var count = 0;
 
@@ -226,6 +227,12 @@ var appModule = (function () {
 
     function onClickBack(){
         console.log('Back Button pressed');
+        
+        var triggerview = document.querySelector('.triggerview');
+        var backPage = document.getElementById('back-page');  
+        
+        triggerview.previousViewChild();
+        backPage.hidden = true;
     }
 
     function onClickMute() {

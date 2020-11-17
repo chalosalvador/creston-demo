@@ -25,7 +25,7 @@ var eventModule = (function () {
     });
 
     function onClickPresentCamera(){
-        console.log('Present Camera Button pressed');
+        console.log('Presenter Camera Button pressed');
     }
 
     function onClickPreset1(){
@@ -52,6 +52,22 @@ var eventModule = (function () {
         });
     }
 
+    function onClickTop() {
+        console.log("Top button pressed!");
+    }
+
+    function onClickLeft() {
+        console.log("Left button pressed!");
+    }
+
+    function onClickRight() {
+        console.log("Right button pressed!");
+    }
+
+    function onClickBottom() {
+        console.log("Bottom button pressed!");
+    }
+
     /**
      * All public or private methods which need to call on init
      */
@@ -66,6 +82,10 @@ var eventModule = (function () {
         onClickPresentCamera: onClickPresentCamera,
         onClickPreset1: onClickPreset1,
         onClickPreset2: onClickPreset2,
-        onClickPreset3: onClickPreset3
+        onClickPreset3: onClickPreset3,
+        onClickTop: onClickTop,
+        onClickBottom: onClickBottom,
+        onClickLeft: onClickLeft,
+        onClickRight: onClickRight
     };
 }());
