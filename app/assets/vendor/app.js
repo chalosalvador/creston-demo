@@ -1,4 +1,7 @@
 /*jslint es6 */
+
+//const { Ch5ModalDialog } = require("@crestron/ch5-crcomlib");
+
 /*global document, window, XMLHttpRequest, CrComLib, event, translateModule, setTimeout, requestAnimationFrame, serviceModule */
 var appModule = (function () {
     'use strict';
@@ -225,8 +228,8 @@ var appModule = (function () {
         console.log('Back Button pressed');
         
         var triggerview = document.querySelector('.triggerview');
-        var backPage = document.getElementById('back-page');
-
+        var backPage = document.getElementById('back-page');  
+        
         triggerview.previousViewChild();
         backPage.hidden = true;
     }

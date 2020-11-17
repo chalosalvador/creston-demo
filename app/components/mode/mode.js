@@ -20,15 +20,20 @@ var modeModule = (function () {
                 counterEl.innerHTML = counterVal; 
                 
             } else {
-                var triggerview = document.querySelector('.triggerview');
-                var eventView = document.querySelector('#event-view');
-                var backPage = document.getElementById('back-page');
-
-                backPage.hidden = false;
-                triggerview.setActiveViewChild(eventView);
+                modal.show = false;
                 clearInterval(timer);
                 counterVal = 7;
                 counterEl.innerHTML = 7;
+                var triggerview = document.querySelector('.triggerview');
+                var eventView = document.querySelector('#event-view');
+                var backPage = document.getElementById('back-page');
+                var button = document.querySelector('#source-btn');
+
+                backPage.hidden = false;
+                triggerview.setActiveViewChild(eventView);
+                eventView.sendeventonshow = "SourceList.Sources[0].SourceNoSelected";
+                button.selected = false;
+                triggerview.gestureable = false;
             }
         }, 1000)
     })
