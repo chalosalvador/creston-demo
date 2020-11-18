@@ -2,21 +2,21 @@
   <div class="row no-gutters">
     <div class="col microphones" id="mic">
       <ch5-list class="ch5-custom-list" style="align-items: center;" maxHeight="100%" orientation="horizontal" indexId="idx"
-        scrollbar="true" receiveStateSize="Room.NumberOfLights">
+        scrollbar="true" receiveStateSize="Room.NumberOfMics">
         <template>
           <div class="vertical-list-item">
-            <span class="label" style="text-align: center; white-space: break-spaces; min-height: 50px; align-items: flex-end; display: flex; justify-content: center;" data-ch5-textcontent="Room.DimmableLights[{{idx}}].NameOfLight">Label</span>
-            <span class="label" style="text-align: center;" data-ch5-textcontent="Room.DimmableLights[{{idx}}].NumberOfMicrophone">Label</span>
+            <span class="label" style="text-align: center; white-space: break-spaces; min-height: 50px; align-items: flex-end; display: flex; justify-content: center;" data-ch5-textcontent="Room.Microphones[{{idx}}].NameOfMic">Label</span>
+            <span class="label" style="text-align: center;" data-ch5-textcontent="Room.Microphones[{{idx}}].NumberOfMicrophone">Label</span>
             <div class="align-items-center">
               <div class="row">
                 <ch5-slider class="lighting-sliders" stretch="width" handleShape="circle"
-                sendEventOnChange="Room.DimmableLights[{{idx}}].SetLightLevel"
-                receiveStateValue="Room.DimmableLights[{{idx}}].LightIsAtLevel" orientation="vertical" onclick="eventModule.gestureableClick()"></ch5-slider>
+                sendEventOnChange="Room.Microphones[{{idx}}].SetMicLevel"
+                receiveStateValue="Room.Microphones[{{idx}}].MicIsAtLevel" orientation="vertical" onclick="eventModule.gestureableClick()"></ch5-slider>
               </div>
                 
               <div class="row">
                 <ch5-button class="lighting-button" shape="circle"
-                sendEventOnClick="Room.DimmableLights[{{idx}}].TurnLightOff" onclick="eventModule.gestureableClick()" iconClass="fas fa-microphone-slash">
+                sendEventOnClick="Room.Microphones[{{idx}}].TurnMicOff" onclick="eventModule.gestureableClick()" iconClass="fas fa-microphone-slash">
                 </ch5-button>
               </div>
             </div>

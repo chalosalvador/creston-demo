@@ -1,0 +1,667 @@
+{
+  "cues": [
+    {
+      "type": "n",
+      "event": "Room.Microphones[0].SetMicLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Microphones[0].MicIsAtLevel",
+          "type": "n",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "n",
+      "event": "Room.Microphones[1].SetMicLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Microphones[1].MicIsAtLevel",
+          "type": "n",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "n",
+      "event": "Room.Microphones[2].SetMicLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Microphones[2].MicIsAtLevel",
+          "type": "n",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "n",
+      "event": "Room.Microphones[3].SetMicLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Microphones[3].MicIsAtLevel",
+          "type": "n",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "n",
+      "event": "Room.Microphones[4].SetMicLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Microphones[4].MicIsAtLevel",
+          "type": "n",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "n",
+      "event": "Room.Microphones[5].SetMicLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Microphones[5].MicIsAtLevel",
+          "type": "n",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "n",
+      "event": "Room.Microphones[6].SetMicLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Microphones[6].MicIsAtLevel",
+          "type": "n",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "n",
+      "event": "Room.Microphones[7].SetMicLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Microphones[7].MicIsAtLevel",
+          "type": "n",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Default",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Camera.IsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 22000
+        },
+        {
+          "state": "Room.Camera.Preset[0].IsAtLevel",
+          "type": "s",
+          "logic": "set",
+          "value": "22000"
+        },
+        {
+          "state": "Room.Camera.Preset[1].IsAtLevel",
+          "type": "s",
+          "logic": "set",
+          "value": "22000"
+        },
+        {
+          "state": "Room.Camera.Preset[2].IsAtLevel",
+          "type": "s",
+          "logic": "set",
+          "value": "22000"
+        },
+        {
+          "state": "Room.Microphones[0].MicIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        },
+        {
+          "state": "Room.Microphones[1].MicIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        },
+        {
+          "state": "Room.Microphones[2].MicIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        },
+        {
+          "state": "Room.Microphones[3].MicIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        }, 
+        {
+          "state": "Room.Microphones[4].MicIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        },
+        {
+          "state": "Room.Microphones[5].MicIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        },
+        {
+          "state": "Room.Microphones[6].MicIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        },
+        {
+          "state": "Room.Microphones[7].MicIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        }
+      ]
+    },
+    {
+      "type": "n",
+      "event": "Room.Camera.SetLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Camera.IsAtLevel",
+          "type": "n",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "s",
+      "event": "Room.Camera.Preset[0].SetLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Camera.Preset[0].IsAtLevel",
+          "type": "s",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "s",
+      "event": "Room.Camera.Preset[1].SetLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Camera.Preset[1].IsAtLevel",
+          "type": "s",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "s",
+      "event": "Room.Camera.Preset[2].SetLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Camera.Preset[2].IsAtLevel",
+          "type": "s",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[0].TurnMicOff",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[0].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[1].TurnMicOff",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[1].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[2].TurnMicOff",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[2].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[3].TurnMicOff",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[3].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[4].TurnMicOff",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[4].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[5].TurnMicOff",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[5].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[6].TurnMicOff",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[6].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[7].TurnMicOff",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[7].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[0].TurnMicOn",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[0].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 65535,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[1].TurnMicOn",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[1].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 65535,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[2].TurnMicOn",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[2].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 65535,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[3].TurnMicOn",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[3].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 65535,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[4].TurnMicOn",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[4].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 65535,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[5].TurnMicOn",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[5].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 65535,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[6].TurnMicOn",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[6].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 65535,
+              "time": 300
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "Room.Microphones[7].TurnMicOn",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Microphones[7].MicIsAtLevel",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 65535,
+              "time": 300
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "onStart": [
+    {
+      "state": "Room.NameOfRoom",
+      "type": "s",
+      "value": "Great Room"
+    },
+    {
+      "state": "Room.Camera.IsAtLevel",
+      "type": "n",
+      "value": 22000
+    },
+    {
+      "state": "Room.Camera.Preset[0].IsAtLevel",
+      "type": "s",
+      "value": "22000"
+    },
+    {
+      "state": "Room.Camera.Preset[1].IsAtLevel",
+      "type": "s",
+      "value": "22000"
+    },
+    {
+      "state": "Room.Camera.Preset[2].IsAtLevel",
+      "type": "s",
+      "value": "22000"
+    },
+    {
+      "state": "Room.NumberOfMics",
+      "type": "n",
+      "value": 8
+    },
+    {
+      "state": "Room.Microphones[0].NameOfMic",
+      "type": "s",
+      "value": "Hand Held"
+    },  
+    {
+      "state": "Room.Microphones[0].NumberOfMicrophone",
+      "type": "s",
+      "value": "1"
+    },     
+    {
+      "state": "Room.Microphones[0].MicIsAtLevel",
+      "type": "n",
+      "value": 33000
+    },
+    {
+      "state": "Room.Microphones[1].NameOfMic",
+      "type": "s",
+      "value": "Hand Held"
+    },   
+    {
+      "state": "Room.Microphones[1].NumberOfMicrophone",
+      "type": "s",
+      "value": "2"
+    },  
+    {
+      "state": "Room.Microphones[1].MicIsAtLevel",
+      "type": "n",
+      "value": 33000
+    },
+    {
+      "state": "Room.Microphones[2].NameOfMic",
+      "type": "s",
+      "value": "Hand Held"
+    },    
+    {
+      "state": "Room.Microphones[2].NumberOfMicrophone",
+      "type": "s",
+      "value": "3"
+    }, 
+    {
+      "state": "Room.Microphones[2].MicIsAtLevel",
+      "type": "n",
+      "value": 33000
+    },
+    {
+      "state": "Room.Microphones[3].NameOfMic",
+      "type": "s",
+      "value": "Hand Held"
+    },    
+    {
+      "state": "Room.Microphones[3].NumberOfMicrophone",
+      "type": "s",
+      "value": "4"
+    }, 
+    {
+      "state": "Room.Microphones[3].MicIsAtLevel",
+      "type": "n",
+      "value": 33000
+    }, 
+    {
+      "state": "Room.Microphones[4].NameOfMic",
+      "type": "s",
+      "value": "Lapel"
+    },      
+    {
+      "state": "Room.Microphones[4].NumberOfMicrophone",
+      "type": "s",
+      "value": "1"
+    }, 
+    {
+      "state": "Room.Microphones[4].MicIsAtLevel",
+      "type": "n",
+      "value": 33000
+    },
+    {
+      "state": "Room.Microphones[5].NameOfMic",
+      "type": "s",
+      "value": "Lapel"
+    },  
+    {
+      "state": "Room.Microphones[5].NumberOfMicrophone",
+      "type": "s",
+      "value": "2"
+    },   
+    {
+      "state": "Room.Microphones[5].MicIsAtLevel",
+      "type": "n",
+      "value": 33000
+    },
+    {
+      "state": "Room.Microphones[6].NameOfMic",
+      "type": "s",
+      "value": "Lapel"
+    },    
+    {
+      "state": "Room.Microphones[6].NumberOfMicrophone",
+      "type": "s",
+      "value": "3"
+    }, 
+    {
+      "state": "Room.Microphones[6].MicIsAtLevel",
+      "type": "n",
+      "value": 33000
+    },
+    {
+      "state": "Room.Microphones[7].NameOfMic",
+      "type": "s",
+      "value": "Lapel"
+    },    
+    {
+      "state": "Room.Microphones[7].NumberOfMicrophone",
+      "type": "s",
+      "value": "4"
+    }, 
+    {
+      "state": "Room.Microphones[7].MicIsAtLevel",
+      "type": "n",
+      "value": 33000
+    }
+  ]
+}

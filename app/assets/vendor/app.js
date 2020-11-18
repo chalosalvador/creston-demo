@@ -204,15 +204,11 @@ var appModule = (function () {
     function loadEmulator() {
 
         // Source Emulator
-        serviceModule.loadJSON("./assets/data/source-emulator.json", function (response) {
+        serviceModule.loadJSON("./assets/data/mode-emulator.json", function (response) {
             serviceModule.initEmulator(JSON.parse(response));
         });
-        // Lighting Emulator
-        serviceModule.loadJSON("./assets/data/lighting-emulator.json", function (response) {
-            serviceModule.initEmulator(JSON.parse(response));
-        });
-        // Video Emulator
-        serviceModule.loadJSON("./assets/data/video-emulator.json", function (response) {
+        // Event Emulator
+        serviceModule.loadJSON("./assets/data/event-emulator.json", function (response) {
             serviceModule.initEmulator(JSON.parse(response));
         });
     }
