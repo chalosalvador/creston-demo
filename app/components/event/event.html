@@ -5,7 +5,7 @@
         scrollbar="true" receiveStateSize="Room.NumberOfLights">
         <template>
           <div class="vertical-list-item">
-            <span class="label" style="text-align: center;" data-ch5-textcontent="Room.DimmableLights[{{idx}}].NameOfLight">Label</span>
+            <span class="label" style="text-align: center; white-space: break-spaces; min-height: 50px; align-items: flex-end; display: flex;" data-ch5-textcontent="Room.DimmableLights[{{idx}}].NameOfLight">Label</span>
             <span class="label" style="text-align: center;" data-ch5-textcontent="Room.DimmableLights[{{idx}}].NumberOfMicrophone">Label</span>
             <div class="align-items-center">
               <div class="row">
@@ -27,7 +27,7 @@
     <aside class="col lighting-sidebar" id="eventSidebar">
       <div class="row">
         <div class="col">
-          <ch5-button customclass="camera-button" shape="rectangle"label="Presenter Camera"
+          <ch5-button customclass="camera-button" type="primary" shape="rectangle" label="Presenter Camera"
           onclick="eventModule.onClickPresentCamera()">
         </ch5-button>
         </div>
@@ -53,30 +53,42 @@
           <div>
             <div class="align-items-center" style="text-align: center;">
                 <p>Zoom in</p>
-                <ch5-slider class="zoom-sliders" stretch="width" handleShape="circle"
+                <ch5-slider id="camera-zoom" class="zoom-sliders" stretch="width" handleShape="circle"
                 sendEventOnChange="Room.Camera.SetLevel"
                 receiveStateValue="Room.Camera.IsAtLevel"
-                receiveStateValue="2000" orientation="vertical" onclick="eventModule.gestureableClick()"></ch5-slider>
+                orientation="vertical" onclick="eventModule.gestureableClick()"></ch5-slider>
                 <p>Zoom out</p>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-4">
-          <ch5-button customclass="camera-button" shape="rectangle" label="Preset 1"
-          onclick="eventModule.onClickPreset1()">
+        <div class="col-4 text-center">
+          <ch5-button id="preset-0" customclass="camera-button" type="primary" shape="rectangle" label="Preset 1"
+          onclick="eventModule.onClickPreset(this)" onpress="eventModule.onPressPreset()" onrelease="eventModule.cancelPresetTimeout()">
           </ch5-button>
         </div>
-        <div class="col-4">
-          <ch5-button customclass="camera-button" shape="rectangle" label="Preset 2"
-          onclick="eventModule.onClickPreset2()">
+        <div class="col-4 text-center">
+          <ch5-button id="preset-1" customclass="camera-button" type="primary" shape="rectangle" label="Preset 2"
+          onclick="eventModule.onClickPreset(this)" onpress="eventModule.onPressPreset()" onrelease="eventModule.cancelPresetTimeout()">
           </ch5-button>
         </div>
-        <div class="col-4">
-          <ch5-button customclass="camera-button" shape="rectangle" label="Preset 3"
-          onclick="eventModule.onClickPreset3()">
+        <div class="col-4 text-center">
+          <ch5-button id="preset-2" customclass="camera-button" type="primary" shape="rectangle" label="Preset 3"
+          onclick="eventModule.onClickPreset(this)" onpress="eventModule.onPressPreset()" onrelease="eventModule.cancelPresetTimeout()">
           </ch5-button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 text-center" data-ch5-textcontent="Room.Camera.Preset[0].IsAtLevel">
+          0
+        </div>
+        <div class="col-4 text-center" data-ch5-textcontent="Room.Camera.Preset[1].IsAtLevel">
+        0
+        </div>
+        <div class="col-4 text-center" data-ch5-textcontent="Room.Camera.Preset[2].IsAtLevel">
+        0
         </div>
       </div>
     </aside>

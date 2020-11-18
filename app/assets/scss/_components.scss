@@ -752,14 +752,14 @@
           width: 150px;
         }
     
-        #counter{
-          font-size: 550%;
-        }
+        // #counter{
+        //   font-size: 550%;
+        // }
       }
   
-      p{
-        font-size: 360%;
-      }
+      // p{
+      //   font-size: 360%;
+      // }
     }
       
   }
@@ -995,8 +995,7 @@
           font-size: 20px;
           border-color: #000000; 
           color: #000000; 
-          background-color: transparent; 
-          margin: 20px 50px; 
+          padding: 10px;
         }
     }
   
@@ -1015,7 +1014,6 @@
   
           .camera-button {
             border: 1px solid #000000;
-            background-color: transparent;
             color: #000000;
             font-size: 50px;
             }
@@ -1230,8 +1228,7 @@
           font-size: 20px;
           border-color: #000000; 
           color: #000000; 
-          background-color: transparent; 
-          margin: 20px 50px; 
+          padding: 10px;
         }
     }
   
@@ -1247,7 +1244,6 @@
   
           .camera-button {
             border: 1px solid #000000;
-            background-color: transparent;
             color: #000000;
             font-size: 50px;
             }
@@ -1452,8 +1448,7 @@
           font-size: 20px;
           border-color: #000000; 
           color: #000000; 
-          background-color: transparent; 
-          margin: 20px 50px; 
+          padding: 10px; 
         }
     }
   
@@ -1472,7 +1467,6 @@
   
           .camera-button {
             border: 1px solid #000000;
-            background-color: transparent;
             color: #000000;
             font-size: 50px;
             }
@@ -1644,13 +1638,13 @@
           margin-right: 95%;
         }
 
-        .ch5-slider.zoom-sliders{
-          height: 355px;
-        }
+        // .ch5-slider.zoom-sliders{
+        //   height: 355px;
+        // }
 
-        .ch5-slider.lighting-sliders{
-            height: 455px;
-        }
+        // .ch5-slider.lighting-sliders{
+        //     height: 455px;
+        // }
   
         .ch5-slider.ch5-slider--orientation--vertical.ch5-slider--shape--circle.ch5-slider--handle-size--regular .noUi-handle {
           width: 25px;
@@ -1674,8 +1668,7 @@
           font-size: 20px;
           border-color: #000000; 
           color: #000000; 
-          background-color: transparent; 
-          margin: 20px 50px; 
+          padding: 10px;
         }
     }
   
@@ -1694,7 +1687,6 @@
   
           .camera-button {
             border: 1px solid #000000;
-            background-color: transparent;
             color: #000000;
             font-size: 50px;
             }
@@ -1809,10 +1801,11 @@
 
     .no-gutters > .col, .no-gutters > [class*="col-"] {
       min-height: 45% !important;
-      height: 90%;
+      height: 515px;
       background: #EEEEEE; 
       margin-right: 2%;
       width:50%;
+      padding: 20px;
 
       ch5-list.ch5-custom-list .ch5-list-horizontal > .list-item {
         padding: 0.5rem 1rem;
@@ -1890,8 +1883,7 @@
         font-size: 20px;
         border-color: #000000; 
         color: #000000; 
-        background-color: transparent; 
-        margin: 20px 50px; 
+        padding: 10px; 
       }
   }
 
@@ -1910,7 +1902,6 @@
 
         .camera-button {
           border: 1px solid #000000;
-          background-color: transparent;
           color: #000000;
           font-size: 50px;
           }
