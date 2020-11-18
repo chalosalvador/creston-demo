@@ -27,12 +27,12 @@ var modeModule = (function () {
                 counterVal = 7;
                 counterEl.innerHTML = 7;
                 var eventView = document.querySelector('#event-view');
-                var backPage = document.getElementById('back-page');
+                var advancedButton = document.querySelector('#advanced');
                 var button = document.querySelector('#source-btn');
 
-                backPage.hidden = false;
                 triggerview.setActiveViewChild(eventView);
                 eventView.sendeventonshow = "SourceList.Sources[0].SourceNoSelected";
+                advancedButton.hidden = false;
                 button.selected = false;
                 triggerview.gestureable = false;
             }

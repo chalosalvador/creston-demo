@@ -229,11 +229,11 @@ var appModule = (function () {
         console.log('Back Button pressed');
         
         var triggerview = document.querySelector('.triggerview');
-        var backPage = document.getElementById('back-page');  
+        var advancedButton = document.querySelector('#advanced');
         
         triggerview.previousViewChild();
+        advancedButton.hidden = true;
         triggerview.gestureable = false;
-        backPage.hidden = true;
     }
 
     function onClickMute() {
@@ -253,6 +253,14 @@ var appModule = (function () {
             count=1;
         }
         triggerview.gestureable = false;
+    }
+
+    function onClickAdvanced() {
+        console.log("Advanced Button pressed!");
+    }
+
+    function onClickLogo() {
+        console.log("Logo pressed!");
     }
 
     /**
@@ -290,7 +298,9 @@ var appModule = (function () {
         onClickBack: onClickBack,
         onClickMute: onClickMute,
         checkElement: checkElement,
-        addClassOnClick: addClassOnClick
+        addClassOnClick: addClassOnClick,
+        onClickAdvanced: onClickAdvanced,
+        onClickLogo: onClickLogo
     };
 
 }());
