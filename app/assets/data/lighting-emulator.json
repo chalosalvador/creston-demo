@@ -97,6 +97,85 @@
       ]
     },
     {
+      "type": "b",
+      "event": "Room.Default",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Room.Camera.IsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 22000
+        },
+        {
+          "state": "Room.Camera.Preset[0].IsAtLevel",
+          "type": "s",
+          "logic": "set",
+          "value": "22000"
+        },
+        {
+          "state": "Room.Camera.Preset[1].IsAtLevel",
+          "type": "s",
+          "logic": "set",
+          "value": "22000"
+        },
+        {
+          "state": "Room.Camera.Preset[2].IsAtLevel",
+          "type": "s",
+          "logic": "set",
+          "value": "22000"
+        },
+        {
+          "state": "Room.DimmableLights[0].LightIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        },
+        {
+          "state": "Room.DimmableLights[1].LightIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        },
+        {
+          "state": "Room.DimmableLights[2].LightIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        },
+        {
+          "state": "Room.DimmableLights[3].LightIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        }, 
+        {
+          "state": "Room.DimmableLights[4].LightIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        },
+        {
+          "state": "Room.DimmableLights[5].LightIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        },
+        {
+          "state": "Room.DimmableLights[6].LightIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        },
+        {
+          "state": "Room.DimmableLights[7].LightIsAtLevel",
+          "type": "n",
+          "logic": "set",
+          "value": 33000
+        }
+      ]
+    },
+    {
       "type": "n",
       "event": "Room.Camera.SetLevel",
       "trigger": "&change",
@@ -104,6 +183,42 @@
         {
           "state": "Room.Camera.IsAtLevel",
           "type": "n",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "s",
+      "event": "Room.Camera.Preset[0].SetLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Camera.Preset[0].IsAtLevel",
+          "type": "s",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "s",
+      "event": "Room.Camera.Preset[1].SetLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Camera.Preset[1].IsAtLevel",
+          "type": "s",
+          "logic": "link"
+        }
+      ]
+    },
+    {
+      "type": "s",
+      "event": "Room.Camera.Preset[2].SetLevel",
+      "trigger": "&change",
+      "actions": [
+        {
+          "state": "Room.Camera.Preset[2].IsAtLevel",
+          "type": "s",
           "logic": "link"
         }
       ]
@@ -884,34 +999,24 @@
       "value": 22000
     },
     {
+      "state": "Room.Camera.Preset[0].IsAtLevel",
+      "type": "s",
+      "value": "22000"
+    },
+    {
+      "state": "Room.Camera.Preset[1].IsAtLevel",
+      "type": "s",
+      "value": "22000"
+    },
+    {
+      "state": "Room.Camera.Preset[2].IsAtLevel",
+      "type": "s",
+      "value": "22000"
+    },
+    {
       "state": "Room.NumberOfLights",
       "type": "n",
       "value": 8
-    },
-    {
-      "state": "Room.Scenes[0].NameOfScene",
-      "type": "s",
-      "value": "ALL ON"
-    },
-    {
-      "state": "Room.Scenes[1].NameOfScene",
-      "type": "s",
-      "value": "ALL OFF"
-    },
-    {
-      "state": "Room.Scenes[2].NameOfScene",
-      "type": "s",
-      "value": "HIGH"
-    },
-    {
-      "state": "Room.Scenes[3].NameOfScene",
-      "type": "s",
-      "value": "MEDIUM"
-    },
-    {
-      "state": "Room.Scenes[4].NameOfScene",
-      "type": "s",
-      "value": "LOW"
     },
     {
       "state": "Room.DimmableLights[0].NameOfLight",
@@ -1032,11 +1137,6 @@
       "state": "Room.DimmableLights[7].LightIsAtLevel",
       "type": "n",
       "value": 33000
-    },
-    {
-      "state": "Room.NumberOfScenes",
-      "type": "n",
-      "value": 5
     }
   ]
 }

@@ -19,7 +19,7 @@
     <section class="main-section">
         <!-- Header start -->
         <nav class="navbar navbar-dark navbar-default fixed-top">
-            <div class="navbar-action-left" id="back-page" hidden="true">
+            <div class="navbar-action-left" id="back-page">
                 <a class='back-arrow' id="back" onclick="appModule.onClickBack()">
                     <i class="fas fa-long-arrow-alt-left"></i>
                 </a>
@@ -31,6 +31,13 @@
                     <i class="fas fa-volume-mute"></i>
                 </a>
                 <h5 class="header-titles" id="title-mute">Mute</h5>
+            </div>
+
+            <div class="navbar-action-left2">
+                <a class='volume-mute' id="default" onclick="appModule.onClickDefault()" >
+                    <i class="fas fa-undo-alt"></i>
+                </a>
+                <h5 class="header-titles" id="title-mute">Default</h5>
             </div>
             
             <div class="navbar-action-center">
@@ -44,7 +51,7 @@
         </nav>
         <!-- Header end -->
 
-        <ch5-triggerview class="triggerview" disableanimation="true">
+        <ch5-triggerview class="triggerview" disableanimation="true" activeview="0">
             <!-- Mode start-->
             <ch5-triggerview-child id="mode-view">
                 <ch5-import-htmlsnippet class="mode-page" url="./components/mode/mode.html">

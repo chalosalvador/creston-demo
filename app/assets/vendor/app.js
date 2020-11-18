@@ -255,6 +255,10 @@ var appModule = (function () {
         triggerview.gestureable = false;
     }
 
+    function onClickDefault() {
+        CrComLib.publishEvent('b', 'Room.Default', true);
+    }
+
     /**
      * Load the emulator, theme, default language and listeners
      */
@@ -289,6 +293,7 @@ var appModule = (function () {
         openThumbNav: openThumbNav,
         onClickBack: onClickBack,
         onClickMute: onClickMute,
+        onClickDefault: onClickDefault,
         checkElement: checkElement,
         addClassOnClick: addClassOnClick
     };

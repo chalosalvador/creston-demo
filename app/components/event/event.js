@@ -7,6 +7,8 @@ var eventModule = (function () {
 
     let eventSideBar = document.getElementById('eventSideBar');
     var triggerview = document.querySelector('.triggerview');
+    let presetTimeout;
+    let presetsValues = new Array;
 
     /**
      * This method is for toggle sidebar in smaller divice
@@ -30,19 +32,24 @@ var eventModule = (function () {
         console.log('Presenter Camera Button pressed');
     }
 
-    function onClickPreset1(){
+    function onClickPreset(element){
         triggerview.gestureable = false;
-        console.log('Preset1 Button pressed');
+        let presetIndex = element.id.split('-')[1];
+        let cameraZoom = document.getElementById('camera-zoom');
+        CrComLib.publishEvent('n', 'Room.Camera.SetLevel', presetsValues[presetIndex] ||  cameraZoom.value);
     }
 
-    function onClickPreset2(){
-        triggerview.gestureable = false;
-        console.log('Preset2 Button pressed');
+    function onPressPreset(event) {
+        presetTimeout = setTimeout(function() {
+            let cameraZoom = document.getElementById('camera-zoom');
+            let presetIndex = event.target.id.split('-')[1];
+            presetsValues[presetIndex] = cameraZoom.value;
+            CrComLib.publishEvent('s', `Room.Camera.Preset[${presetIndex}].SetLevel`, cameraZoom.value);
+        }, 3000);
     }
 
-    function onClickPreset3(){
-        triggerview.gestureable = false;
-        console.log('Preset3 Button pressed');
+    function cancelPresetTimeout() {
+        clearTimeout(presetTimeout);
     }
 
     function gestureableClick() {
@@ -93,9 +100,10 @@ var eventModule = (function () {
     return {
         eventSideBarToggle: eventSideBarToggle,
         onClickPresentCamera: onClickPresentCamera,
-        onClickPreset1: onClickPreset1,
-        onClickPreset2: onClickPreset2,
-        onClickPreset3: onClickPreset3,
+        onClickPreset: onClickPreset,
+        onPressPreset: onPressPreset,
+        presetsValues: presetsValues,
+        cancelPresetTimeout: cancelPresetTimeout,
         onClickTop: onClickTop,
         onClickBottom: onClickBottom,
         onClickLeft: onClickLeft,
