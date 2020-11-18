@@ -230,9 +230,11 @@ var appModule = (function () {
         
         var triggerview = document.querySelector('.triggerview');
         var advancedButton = document.querySelector('#advanced');
+        var defaultButton = document.querySelector('#default-button');
         
         triggerview.previousViewChild();
         advancedButton.hidden = true;
+        defaultButton.hidden = true;
         triggerview.gestureable = false;
     }
 
@@ -257,6 +259,7 @@ var appModule = (function () {
 
     function onClickDefault() {
         CrComLib.publishEvent('b', 'Room.Default', true);
+    }
 
     function onClickAdvanced() {
         console.log("Advanced Button pressed!");

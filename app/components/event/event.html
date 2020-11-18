@@ -5,7 +5,7 @@
         scrollbar="true" receiveStateSize="Room.NumberOfLights">
         <template>
           <div class="vertical-list-item">
-            <span class="label" style="text-align: center; white-space: break-spaces; min-height: 50px; align-items: flex-end; display: flex;" data-ch5-textcontent="Room.DimmableLights[{{idx}}].NameOfLight">Label</span>
+            <span class="label" style="text-align: center; white-space: break-spaces; min-height: 50px; align-items: flex-end; display: flex; justify-content: center;" data-ch5-textcontent="Room.DimmableLights[{{idx}}].NameOfLight">Label</span>
             <span class="label" style="text-align: center;" data-ch5-textcontent="Room.DimmableLights[{{idx}}].NumberOfMicrophone">Label</span>
             <div class="align-items-center">
               <div class="row">
@@ -33,22 +33,16 @@
         </div>
         
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="row">
-            <ch5-image class="top-button" url="./assets/img/button.png" onclick="eventModule.onClickTop()"></ch5-image>
+      <div class="row mt-5">
+        <div class="col d-flex justify-content-center">
+          <div class="camera-control-buttons">
+              <ch5-image class="top-button" url="./assets/img/button.png" onclick="eventModule.onClickTop()"></ch5-image>
+              <ch5-image class="left-button" url="./assets/img/button.png" onclick="eventModule.onClickLeft()"></ch5-image>
+              <ch5-image class="right-button" url="./assets/img/button.png" onclick="eventModule.onClickRight()"></ch5-image>
+              <ch5-image class="bottom-button" url="./assets/img/button.png" onclick="eventModule.onClickBottom()"></ch5-image>
           </div>
-
-          <div class="row">
-            <ch5-image class="left-button" url="./assets/img/button.png" onclick="eventModule.onClickLeft()"></ch5-image>
-            <ch5-image class="right-button" url="./assets/img/button.png" onclick="eventModule.onClickRight()"></ch5-image>
-          </div>
-
-          <div class="row">
-            <ch5-image class="bottom-button" url="./assets/img/button.png" onclick="eventModule.onClickBottom()"></ch5-image>
-          </div>
-          
         </div>
+
         <div class="col">
           <div>
             <div class="align-items-center" style="text-align: center;">
@@ -62,7 +56,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-5">
         <div class="col-4 text-center">
           <ch5-button id="preset-0" customclass="camera-button" type="primary" shape="rectangle" label="Preset 1"
           onclick="eventModule.onClickPreset(this)" onpress="eventModule.onPressPreset()" onrelease="eventModule.cancelPresetTimeout()">

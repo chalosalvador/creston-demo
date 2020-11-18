@@ -1,32 +1,32 @@
-# CH5 - Vanilla Horizontal Sample (Ch5HorizontalSample)
+# CH5 - DEMO
 
-The sample project uses CH5 library and Vanilla javascript which helps to kick-start your project to build fast, robust, and adaptable web apps with little changes. The project can be deployed on TSW Panels, Android and iOS devices.
+The sample project uses CH5 library and Vanilla javascript. The project can be deployed on TSW Panels, Android and iOS devices.
  
 ## See Crestron Labs for documentation
 
 http://www.crestronlabs.com/forumdisplay.php?229-Crestron-HTML5-Lab
 
-# Ch5HorizontalSample
+# Requisites
 
-The project have dependencies that require nodejs(https://nodejs.org), together with YARN(https://yarnpkg.com) or NPM.
+The project have dependencies that require nodejs(https://nodejs.org), together with NPM.
 
 # Installation
 
 ## Install all global dependencies
 
-Run `yarn global add @crestron/ch5-utilities-cli` or `npm install -g @crestron/ch5-utilities-cli` to deploy the project on device.
+Run `npm install -g @crestron/ch5-utilities-cli` to deploy the project on device.
 
 ## Install all local dependencies
 
-Run `yarn install` to install all dependencies for the project.
+Run `npm install` to install all dependencies for the project.
 
 ## Development server
 
-Run `yarn start` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `yarn build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 # How to deploy the project in TSW device
 

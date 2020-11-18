@@ -36,7 +36,7 @@ var eventModule = (function () {
         triggerview.gestureable = false;
         let presetIndex = element.id.split('-')[1];
         let cameraZoom = document.getElementById('camera-zoom');
-        CrComLib.publishEvent('n', 'Room.Camera.SetLevel', presetsValues[presetIndex] ||  cameraZoom.value);
+        CrComLib.publishEvent('n', 'Room.Camera.SetLevel', presetsValues[presetIndex] ||  22000);
     }
 
     function onPressPreset(event) {
@@ -45,7 +45,7 @@ var eventModule = (function () {
             let presetIndex = event.target.id.split('-')[1];
             presetsValues[presetIndex] = cameraZoom.value;
             CrComLib.publishEvent('s', `Room.Camera.Preset[${presetIndex}].SetLevel`, cameraZoom.value);
-        }, 3000);
+        }, 2000);
     }
 
     function cancelPresetTimeout() {

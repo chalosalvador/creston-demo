@@ -19,33 +19,37 @@
     <section class="main-section">
         <!-- Header start -->
         <nav class="navbar navbar-dark navbar-default fixed-top">
-            <div class="navbar-action-left" id="back-page">
-                <a class='back-arrow' id="back" onclick="appModule.onClickBack()">
-                    <i class="fas fa-long-arrow-alt-left"></i>
-                </a>
-                <h5 class="header-titles">Back</h5>
+            <div class="navbar-action-left">
+                <div id="back-page">
+                    <a class='back-arrow' id="back" onclick="appModule.onClickBack()">
+                        <i class="fas fa-long-arrow-alt-left"></i>
+                    </a>
+                    <h5 class="header-titles">Back</h5>
+                </div>
+
+                <div>
+                    <a class='volume-mute' id="mute" onclick="appModule.onClickMute()" >
+                        <i class="fas fa-volume-mute"></i>
+                    </a>
+                    <h5 class="header-titles" id="title-mute">Mute</h5>
+                </div>
+                
+                <div id="advanced" hidden="true">
+                    <a class='advanced-button' onclick="appModule.onClickAdvanced()">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                    <h5 class="header-titles" id="title-advanced">Advanced</h5>
+                </div>
+    
+                <div id="default-button" hidden="true">
+                    <a class='volume-mute' id="default" onclick="appModule.onClickDefault()" >
+                        <i class="fas fa-undo-alt"></i>
+                    </a>
+                    <h5 class="header-titles" id="title-mute">Default</h5>
+                </div>
             </div>
 
-            <div class="navbar-action-left2">
-                <a class='volume-mute' id="mute" onclick="appModule.onClickMute()" >
-                    <i class="fas fa-volume-mute"></i>
-                </a>
-                <h5 class="header-titles" id="title-mute">Mute</h5>
-            </div>
-
-            <div class="navbar-action-left2">
-                <a class='volume-mute' id="default" onclick="appModule.onClickDefault()" >
-                    <i class="fas fa-undo-alt"></i>
-                </a>
-                <h5 class="header-titles" id="title-mute">Default</h5>
-            </div>
             
-            <div class="navbar-action-left3" id="advanced" hidden="true">
-                <a class='advanced-button' onclick="appModule.onClickAdvanced()">
-                    <i class="fas fa-cog"></i>
-                </a>
-                <h5 class="header-titles" id="title-advanced">Advanced</h5>
-            </div>
             
             <div class="navbar-action-center">
                 <a class="navbar-brand">

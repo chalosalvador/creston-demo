@@ -28,11 +28,13 @@ var modeModule = (function () {
                 counterEl.innerHTML = 7;
                 var eventView = document.querySelector('#event-view');
                 var advancedButton = document.querySelector('#advanced');
+                var defaultButton = document.querySelector('#default-button');
                 var button = document.querySelector('#source-btn');
 
                 triggerview.setActiveViewChild(eventView);
                 eventView.sendeventonshow = "SourceList.Sources[0].SourceNoSelected";
                 advancedButton.hidden = false;
+                defaultButton.hidden = false;
                 button.selected = false;
                 triggerview.gestureable = false;
             }
