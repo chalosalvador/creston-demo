@@ -19,7 +19,7 @@
     <section class="main-section">
         <!-- Header start -->
         <nav class="navbar navbar-dark navbar-default fixed-top">
-            <div class="navbar-action-left" id="back-page" hidden="true">
+            <div class="navbar-action-left" id="back-page">
                 <a class='back-arrow' id="back" onclick="appModule.onClickBack()">
                     <i class="fas fa-long-arrow-alt-left"></i>
                 </a>
@@ -32,14 +32,23 @@
                 </a>
                 <h5 class="header-titles" id="title-mute">Mute</h5>
             </div>
+
+            <div class="navbar-action-left3" id="advanced" hidden="true">
+                <a class='advanced-button' onclick="appModule.onClickAdvanced()">
+                    <i class="fas fa-cog"></i>
+                </a>
+                <h5 class="header-titles" id="title-advanced">Advanced</h5>
+            </div>
             
             <div class="navbar-action-center">
                 <a class="navbar-brand">
                 <h1>Room Name</h1>
                 </a>
-            </div>
+            </div>   
             
-                
+            <div class="navbar-action-right" id="logo">
+                <ch5-image class="logos" url="./assets/img/logo.png" onclick="appModule.onClickLogo()"></ch5-image>
+            </div>
             
         </nav>
         <!-- Header end -->

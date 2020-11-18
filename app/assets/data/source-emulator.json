@@ -78,7 +78,7 @@
     }, {
       "state": "SourceList.Sources[2].IconClassOfSource",
       "type": "s",
-      "value": "fas fa-stream"
+      "value": "fas fa-broadcast-tower"
     }
   ]
 }
