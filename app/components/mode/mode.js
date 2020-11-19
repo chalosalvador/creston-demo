@@ -16,7 +16,8 @@ var modeModule = (function () {
     modal.addEventListener('afterShow', function(e){
         triggerview.gestureable = false;
         console.log('show');
-        timer = setInterval(function(){
+        timer = setInterval(function() {
+            console.log(counterVal)
             if(counterVal > 0 ) {
                 counterVal--;
                 counterEl.innerHTML = counterVal; 
@@ -59,10 +60,13 @@ var modeModule = (function () {
     }
 
     function cancelInterval(){
+        console.log('cancel');
         triggerview.gestureable = false;
         clearInterval(timer);
         counterVal = 7;
         counterEl.innerHTML = 7;
+        modal.show = false;
+        CrComLib.publishEvent('b', `SourceList.Sources[0].SetSourceNoSelected`, false);
     }
 
     /**
