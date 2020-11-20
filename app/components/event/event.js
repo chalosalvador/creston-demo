@@ -36,7 +36,7 @@ var eventModule = (function () {
         triggerview.gestureable = false;
         let presetIndex = element.id.split('-')[1];
         let cameraZoom = document.getElementById('camera-zoom');
-        CrComLib.publishEvent('n', 'Room.Camera.SetLevel', presetsValues[presetIndex] ||  22000);
+        CrComLib.publishEvent('n', 'Room.Camera.SetLevel', presetsValues[presetIndex] !== undefined ? presetsValues[presetIndex] : 22000);
     }
 
     function onPressPreset(event) {
@@ -54,6 +54,12 @@ var eventModule = (function () {
 
     function gestureableClick() {
         triggerview.gestureable = false;
+    }
+
+    function resetPresets() {
+        for(let i = 0; i < presetsValues.length; i++) {
+            presetsValues[i] = 22000;
+        }
     }
 
 
@@ -103,6 +109,7 @@ var eventModule = (function () {
         onClickPreset: onClickPreset,
         onPressPreset: onPressPreset,
         presetsValues: presetsValues,
+        resetPresets: resetPresets,
         cancelPresetTimeout: cancelPresetTimeout,
         onClickTop: onClickTop,
         onClickBottom: onClickBottom,

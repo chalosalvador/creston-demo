@@ -254,6 +254,7 @@ var appModule = (function () {
     }
 
     function onClickDefault() {
+        eventModule.resetPresets();
         CrComLib.publishEvent('b', 'Room.Default', true);
     }
 
